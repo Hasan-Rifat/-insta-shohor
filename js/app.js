@@ -26,8 +26,8 @@ const reportPost = (id) => {
     showPosts(remainingPosts);
 };
 
-const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+const displayContent = (text ) => {
+    return text.length < 30 ? text: text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
