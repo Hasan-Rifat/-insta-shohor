@@ -20,6 +20,7 @@ const isLiked = (id) => {
 const addToLiked = (id) => {
   likedPostsId.push(id);
   showPosts(posts);
+  reportPost()
 };
 
 const reportPost = (id) => {
