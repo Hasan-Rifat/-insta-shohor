@@ -38,6 +38,8 @@ const switchTab = (id) => {
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
     document.getElementById('faq').style.display = 'block'
+    document.getElementById('like-post-heading').style.display = 'none';
+    document.getElementById('reported-post-heading').style.display = 'none';
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
@@ -149,7 +151,9 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  document.getElementById('faq').style.display = 'none'
+  document.getElementById('faq').style.display = 'none';
+  document.getElementById('like-post-heading').style.display = 'block';
+  document.getElementById('reported-post-heading').style.display = 'none';
   document.getElementById("liked").innerHTML = '';
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
@@ -159,7 +163,9 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
-  document.getElementById('faq').style.display = 'none'
+  document.getElementById('faq').style.display = 'none';
+  document.getElementById('reported-post-heading').style.display = 'block';
+  document.getElementById('like-post-heading').style.display = 'none';
   document.getElementById("reported").innerHTML = '';
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
